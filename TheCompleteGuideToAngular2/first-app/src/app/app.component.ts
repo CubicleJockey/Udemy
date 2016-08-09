@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { OtherComponent} from './other';
-//import { OtherComponent} from './other/component';
+import { OtherComponent, AnotherComponent } from './other';
 
 @Component({
   moduleId: module.id,
@@ -8,13 +7,14 @@ import { OtherComponent} from './other';
   template: `
 	<h1>Inline Template</h1>
 	<fa-other></fa-other>
+	<fa-another></fa-another>
   `,
   styles: [`
 	h1{
 		color: red;
 	}
   `],
-  directives: [OtherComponent] //<----- After import
+  directives: [OtherComponent, AnotherComponent] //<----- After import
 })
 export class AppComponent {
 	
