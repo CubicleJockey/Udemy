@@ -4,11 +4,15 @@ import { Component } from '@angular/core';
   moduleId: module.id,
   selector: 'fa-another',
   template: `
-    <p>
-      another Works!
-    </p>
+    <article>
+		Test
+	</article>
   `,
-  styles: []
+  styles: [`
+	article {
+		border: 1px solid black;
+	}
+  `]
 })
 export class AnotherComponent {
 
