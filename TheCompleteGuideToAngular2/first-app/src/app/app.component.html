@@ -1,5 +1,13 @@
-<h1>
-  {{title}}
-</h1>
-<p>This is a non dynamic display.</p>
-<p>{{message}}</p>
+<h1>Inline Template</h1>
+
+<fa-other>
+  <div><p>This won't be displayed it will be thrown away because ng-conent isn't used.</p></div>
+</fa-other>
+
+<!--another.component.html is using the ng-content directive which replaces code between a custom component.-->
+<fa-another>
+  <p>First content replaced with ng-content</p>
+</fa-another>
+<fa-another>
+  <p>Different content provied by ng-content</p>
+</fa-another>
