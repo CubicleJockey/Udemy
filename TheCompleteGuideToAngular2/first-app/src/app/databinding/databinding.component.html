@@ -1,3 +1,25 @@
+<h1>String Interpolation</h1>
 <p>
   {{stringInterpolation}} | {{numberInterpolation}}
+</p>
+<hr>
+<h1>Property Binding</h1>
+<input type="text" value="{{stringInterpolation}}" />
+<br>
+<input type="text" [value]="stringInterpolation" />
+<hr>
+<p [ngClass]="{redBorder: true}">
+  ngClass
+  This is styled.
+</p>
+<p [ngClass]="{redBorder: false}">
+  ngClass
+  This is not styled
+</p>
+<p [ngClass]="{redBorder: onTest()}">
+  ngClass
+  This is styled by a method.
+</p>
+<p [ngStyle]="{color: 'blue'}">
+  This is styled by ngStyle.
 </p>
