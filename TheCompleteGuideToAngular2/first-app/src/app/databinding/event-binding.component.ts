@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['event-binding.component.css']
 })
 export class EventBindingComponent {
+  @Output() dreClicked = new EventEmitter<string>();
+
   onClicked(){
-    alert('It worked!');
+    this.dreClicked.emit('It Worked!');
   }
 }
+
