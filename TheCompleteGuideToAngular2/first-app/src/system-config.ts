@@ -38,6 +38,7 @@ const barrels: string[] = [
   'app/shared',
   'app/other',
   'app/databinding',
+  'app/lifecycle',
   /** @cli-barrel */
 ];
 
