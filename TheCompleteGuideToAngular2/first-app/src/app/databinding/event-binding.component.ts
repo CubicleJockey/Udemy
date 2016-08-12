@@ -7,10 +7,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['event-binding.component.css']
 })
 export class EventBindingComponent {
-  @Output() dreClicked = new EventEmitter<string>();
+  @Output('dreClicked') myClicked = new EventEmitter<string>();
 
   onClicked(){
-    this.dreClicked.emit('It Worked!');
+    this.myClicked.emit('It Worked!');
   }
 }
 
