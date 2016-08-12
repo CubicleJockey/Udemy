@@ -2,11 +2,13 @@
 <p>
   {{stringInterpolation}} | {{numberInterpolation}}
 </p>
+
 <hr>
 <h1>Property Binding</h1>
 <input type="text" value="{{stringInterpolation}}" />
 <br>
 <input type="text" [value]="stringInterpolation" />
+
 <hr>
 <p [ngClass]="{redBorder: true}">
   ngClass
@@ -23,9 +25,15 @@
 <p [ngStyle]="{color: 'blue'}">
   This is styled by ngStyle.
 </p>
+
 <hr>
 <h1>Custom Property Binding</h1>
 <app-property-binding [result]="10"></app-property-binding>
+
 <hr>
 <h1>Event Data Binding</h1>
 <app-event-binding (dreClicked)="onClicked($event)"></app-event-binding>
+
+<hr>
+<h1>Two way Data Binding</h1>
+<app-twoway-binding></app-twoway-binding>
