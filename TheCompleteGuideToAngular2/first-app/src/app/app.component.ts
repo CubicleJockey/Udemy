@@ -12,5 +12,5 @@ import { LifecycleComponent } from './lifecycle';
   directives: [OtherComponent, AnotherComponent] //<----- After import*/
 })
 export class AppComponent {
-
+  delete: boolean = false;
 }
