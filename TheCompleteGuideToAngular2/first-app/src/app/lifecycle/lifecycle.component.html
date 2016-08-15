@@ -1,3 +1,4 @@
 <ng-content></ng-content>
 <hr>
-<p>{{bindable}}</p>
+<p #boundableParagraph>{{bindable}}</p>
+<p>{{boundableParagraph.textContent}}</p>
