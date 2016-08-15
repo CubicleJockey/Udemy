@@ -13,4 +13,6 @@ import { LifecycleComponent } from './lifecycle';
 })
 export class AppComponent {
   delete: boolean = false;
+  test: string = 'Starting value.';
+  boundValue: number = 1000;
 }

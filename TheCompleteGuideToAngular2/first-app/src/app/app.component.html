@@ -17,5 +17,9 @@
 <app-databinding></app-databinding>
 <hr>
 <h1>Component LifeCycle</h1>
-<app-lifecycle *ngIf="!delete"></app-lifecycle>
+<app-lifecycle *ngIf="!delete" [bindable]="boundValue">
+  <p>{{test}}</p>
+</app-lifecycle>
 <button (click)="delete = true">Click to Delete!</button>
+<button (click)="test = 'Changed Value.'">Click to Change Content</button>
+<button (click)="boundValue = 2000">Click to Change Bindable</button>

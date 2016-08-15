@@ -7,7 +7,8 @@ import {
   AfterContentChecked,
   AfterViewInit,
   AfterViewChecked,
-  OnDestroy
+  OnDestroy,
+  Input
 } from '@angular/core';
 
 @Component({
@@ -24,6 +25,9 @@ export class LifecycleComponent implements OnChanges,
                                            AfterViewInit,
                                            AfterViewChecked,
                                            OnDestroy {
+
+  @Input() bindable: number = 1000;
+
   ngOnChanges() {
     this.log('OnChanges');
   }
