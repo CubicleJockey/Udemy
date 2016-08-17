@@ -1,18 +1,23 @@
-import { Directive, ElementRef, Renderer } from '@angular/core';
+import { Directive, HostListener, HostBinding } from '@angular/core';
 
 @Directive({
   selector: '[highlight]'
 })
 export class Highlight {
-  /*private elementRef: ElementRef; <-- commented out because the shortcut is putting private
-    inside the constructor
-  */
+  @HostListener('mouseenter') mouseover(){
+    this.backgroundColor = 'green';
+  };
 
-  constructor(private elementRef: ElementRef, private renderer: Renderer) {
-    //Can do this but not advised.
-    //this.elementRef.nativeElement.style.backgroundColor = 'green';
+  @HostListener('mouseleave') mouseexit(){
+    this.backgroundColor = 'white';
+  };
 
-    //clean way and also works in environments that are not browsers.
-    this.renderer.setElementStyle(this.elementRef.nativeElement, 'background-color', 'green');
+  @HostBinding('style.backgroundColor') get setColor(){
+    return this.backgroundColor;
+  };
+
+  private backgroundColor = 'white';
+  constructor() {
+
   }
 }
