@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
-import { Highlight } from './highlight.directive';
+import { HighlightDirective } from './highlight.directive';
 
 @Component({
   moduleId: module.id,
   selector: 'directives-app',
   templateUrl: 'directives.component.html',
   styleUrls: ['directives.component.css'],
-  directives: [Highlight]
+  directives: [HighlightDirective]
 })
 export class DirectivesAppComponent {
+  private switch: boolean = true;
 
+  onSwitch(){
+    this.switch = !this.switch;
+  }
 }

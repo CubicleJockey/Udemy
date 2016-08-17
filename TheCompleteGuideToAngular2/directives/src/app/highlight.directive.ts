@@ -3,7 +3,7 @@ import { Directive, HostListener, HostBinding, Renderer, ElementRef, Input, OnIn
 @Directive({
   selector: '[highlight]'
 })
-export class Highlight {
+export class  HighlightDirective{
   @HostListener('mouseenter') mouseover(){
     //this.renderer.setElementStyle(this.elementRef.nativeElement, 'background-color', this.highlightColor);
     this.backgroundColor = this.highlightColor;
