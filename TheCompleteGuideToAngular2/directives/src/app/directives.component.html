@@ -1,3 +1,8 @@
 <h1>Attribute Directives</h1>
 <h2>ngClass / ngStyle</h2>
 <div [ngClass]="{border: false, background: true}"></div>
+<div [ngClass]="{border: true, background: true}"></div>
+<div [class.border]="false" class="background"></div>
+<div [class.border]="true" class="background"></div>
+<hr>
+<div [ngStyle]="{'background-color': 'red'}"></div>
