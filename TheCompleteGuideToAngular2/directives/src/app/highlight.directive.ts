@@ -1,23 +1,30 @@
-import { Directive, HostListener, HostBinding, Renderer, ElementRef } from '@angular/core';
+import { Directive, HostListener, HostBinding, Renderer, ElementRef, Input, OnInit } from '@angular/core';
 
 @Directive({
   selector: '[highlight]'
 })
 export class Highlight {
   @HostListener('mouseenter') mouseover(){
-    this.renderer.setElementStyle(this.elementRef.nativeElement, 'background-color', 'green');
-    //this.backgroundColor = 'green';
+    //this.renderer.setElementStyle(this.elementRef.nativeElement, 'background-color', this.highlightColor);
+    this.backgroundColor = this.highlightColor;
   };
 
-  @HostListener('mouseleave') mouseexit(){
-    this.renderer.setElementStyle(this.elementRef.nativeElement, 'background-color', 'white');
-    //this.backgroundColor = 'white';
+  @HostListener('mouseleave') mouseleave(){
+    //this.renderer.setElementStyle(this.elementRef.nativeElement, 'background-color', this.defaultColor);
+    this.backgroundColor = this.defaultColor;
   };
 
-/*  @HostBinding('style.backgroundColor') get setColor(){
+  @HostBinding('style.backgroundColor') get setColor(){
     return this.backgroundColor;
-  };*/
+  };
 
-  private backgroundColor = 'white';
+  @Input() defaultColor = 'white';
+  @Input('highlight') highlightColor = 'green'; //shares same name with directive as a shortcut to do this [highlight]=""
+  private backgroundColor: string;
+
   constructor(private elementRef: ElementRef, private renderer: Renderer) {  }
+
+  ngOnInit(){
+    this.backgroundColor = this.defaultColor;
+  }
 }
