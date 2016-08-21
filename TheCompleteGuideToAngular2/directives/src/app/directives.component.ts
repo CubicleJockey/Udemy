@@ -9,9 +9,15 @@ import { HighlightDirective } from './highlight.directive';
   directives: [HighlightDirective]
 })
 export class DirectivesAppComponent {
+  //*ngIf
   private switch: boolean = true;
-
   onSwitch(){
     this.switch = !this.switch;
   }
+
+  //*ngFor
+  private items = [1, 2, 3, 4, 5];
+
+  //ngSwtich ([ngSwitch]="value")
+  private value = 10;
 }
