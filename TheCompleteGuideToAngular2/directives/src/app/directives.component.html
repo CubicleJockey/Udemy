@@ -14,6 +14,10 @@
 <h1>Structural Directives. (Changing the DOM)</h1>
 <h2>*ngIf</h2>
 <div *ngIf="switch">Conditional Text</div>
+<!--Secondary way to write ngIf without syntatic sugar-->
+<template [ngIf]="switch">
+  <div>Conditional Text - Secondary</div>
+</template>
 <button (click)="onSwitch()">Switch</button>
 
 <hr>

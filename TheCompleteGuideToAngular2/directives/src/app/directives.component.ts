@@ -19,5 +19,5 @@ export class DirectivesAppComponent {
   private items = [1, 2, 3, 4, 5];
 
   //ngSwtich ([ngSwitch]="value")
-  private value = 10;
+  private value = 100;
 }
