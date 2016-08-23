@@ -1,3 +1,35 @@
 <h1>Attribute Directives</h1>
 <h2>ngClass / ngStyle</h2>
 <div [ngClass]="{border: false, background: true}"></div>
+<div [ngClass]="{border: true, background: true}"></div>
+<div [class.border]="false" class="background"></div>
+<div [class.border]="true" class="background"></div>
+<div [ngStyle]="{'background-color': 'red'}"></div>
+
+<hr>
+<h2>Custom Attribute Directive</h2>
+<div [highlight]="'blue'" [defaultColor]="'red'">Batman</div>
+
+<hr>
+<h1>Structural Directives. (Changing the DOM)</h1>
+<h2>*ngIf</h2>
+<div *ngIf="switch">Conditional Text</div>
+<!--Secondary way to write ngIf without syntatic sugar-->
+<template [ngIf]="switch">
+  <div>Conditional Text - Secondary</div>
+</template>
+<button (click)="onSwitch()">Switch</button>
+
+<hr>
+<h2>*ngFor</h2>
+<ul>
+  <li *ngFor="let item of items; let i = index">{{item}} (Index: {{i}})</li>
+</ul>
+
+<hr>
+<h2>ngSwitch</h2>
+<div [ngSwitch]="value">
+  <p *ngSwitchWhen="10">10</p>
+  <p *ngSwitchWhen="100">100</p>
+  <p *ngSwitchDefault>Default</p>
+</div>
