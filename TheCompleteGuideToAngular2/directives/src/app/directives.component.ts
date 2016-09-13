@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { HighlightDirective } from './highlight.directive';
+import { UnlessDirective } from './unless.directive';
 
 @Component({
   moduleId: module.id,
   selector: 'directives-app',
   templateUrl: 'directives.component.html',
   styleUrls: ['directives.component.css'],
-  directives: [HighlightDirective]
+  directives: [HighlightDirective, UnlessDirective]
 })
 export class DirectivesAppComponent {
   //*ngIf
