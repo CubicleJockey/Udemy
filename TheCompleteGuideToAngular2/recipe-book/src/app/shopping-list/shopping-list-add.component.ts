@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppingListAddComponent implements OnInit {
 
+  public items: Array<any> = [];
+
   constructor() { }
 
   ngOnInit() {
