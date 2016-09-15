@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ShoppingListAddComponent } from './shopping-list-add.component';
+import { ShoppingListService } from './shopping-list.service';
+import { Ingredient } from '../shared/ingredient';
 
 @Component({
   moduleId: module.id,
@@ -8,10 +10,14 @@ import { ShoppingListAddComponent } from './shopping-list-add.component';
   directives: [ShoppingListAddComponent]
 })
 export class ShoppingListComponent implements OnInit {
+  private ingredients: Array<Ingredient>;
 
-  constructor() { }
+  constructor(private shoppingListService: ShoppingListService) {
+    this.ingredients = [];
+  }
 
   ngOnInit() {
+    this.ingredients = this.shoppingListService.getIngredients();
   }
 
 }
