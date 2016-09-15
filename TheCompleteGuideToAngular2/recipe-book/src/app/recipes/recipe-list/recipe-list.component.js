@@ -6,7 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require('@angular/core');
-var recipe_1 = require('../recipe');
+var recipe_1 = require('../../shared/recipe');
 var recipe_item_component_1 = require('./recipe-item.component');
 var RecipeListComponent = (function () {
     function RecipeListComponent() {
