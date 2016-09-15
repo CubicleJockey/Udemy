@@ -19,17 +19,17 @@ export class CmpAComponent {
 
   public onLog(value: string) {
       this.logService.writeToLog(value);
-    }
+  }
 
   public onStore(value: string) {
       this.dataService.addData(value);
-    }
+  }
 
   public onGet() {
       this.items = this.dataService.getData();
-    }
+  }
 
   public onSend(value: string) {
-
-    }
+    this.dataService.pushData(value);
+  }
 }
