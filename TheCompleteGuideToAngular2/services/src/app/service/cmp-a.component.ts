@@ -1,53 +1,35 @@
 import { Component } from '@angular/core';
-
-import { LogService } from './log.service';
 import { DataService } from './data.service';
+import { LogService } from './log.service';
 
 @Component({
     moduleId: module.id,
     selector: 'si-cmp-a',
-    template: `
-    <div>
-      <input type="text" #input>
-      <button (click)="onLog(input.value)">Log</button>
-      <button (click)="onStore(input.value)">Store</button>
-      <button (click)="onSend(input.value)">Send</button>
-    </div>
-    <hr>
-    <div>
-        <button (click)="onGet()">Refresh Storage</button>
-        <h3>Storage</h3>
-        <ul>
-            <li *ngFor="let item of items">{{item}}</li>
-        </ul>
-        <h3>Received Value</h3>
-        <p>{{value}}</p>
-    </div>
-  `,
-  providers: [LogService]
+    templateUrl: 'cmp-a.component.html'
 })
 export class CmpAComponent {
-    value = '';
-    items: string[] = [];
+  public value: string;
+  public items: Array<string>;
 
-    constructor(private logService: LogService,
-                private dataService: DataService){
+  constructor(private logService: LogService,
+              private dataService: DataService){
+    this.value = '';
+    this.items = [];
+  }
 
-    }
-
-    onLog(value: string) {
+  public onLog(value: string) {
       this.logService.writeToLog(value);
     }
 
-    onStore(value: string) {
+  public onStore(value: string) {
       this.dataService.addData(value);
     }
 
-    onGet() {
+  public onGet() {
       this.items = this.dataService.getData();
     }
 
-    onSend(value: string) {
+  public onSend(value: string) {
 
     }
 }

@@ -26,7 +26,7 @@
     "prefix": "rb",
     "sourceDir": "src",
     "styleExt": "css",
-    "prefixInterfaces": false,
+    "prefixInterfaces": true,
     "lazyRoutePrefix": "+"
   }
 }

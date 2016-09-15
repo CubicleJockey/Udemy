@@ -14,18 +14,11 @@
 <body>
   <services-di-app>Loading...</services-di-app>
 
-  
-
-    {{#each scripts.polyfills}}<script src="{{.}}"></script>{{/each}}
+  {{#each scripts.polyfills}}<script src="{{.}}"></script>{{/each}}
     <script>
       System.import('system-config.js').then(function () {
         System.import('main');
       }).catch(console.error.bind(console));
     </script>
-
-  
-
-
-
 </body>
 </html>
