@@ -8,6 +8,8 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { HomeComponent } from './home.component';
+import { UserDetailsComponent } from './user/user-details.component';
+import { UserEditComponent } from './user/user-edit.component';
 
 //Providers
 import { RoutingModule } from './app.routes';
@@ -16,7 +18,9 @@ import { RoutingModule } from './app.routes';
   declarations: [
     AppComponent,
     UserComponent,
-    HomeComponent
+    HomeComponent,
+    UserDetailsComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,
