@@ -2,8 +2,9 @@
     <h1>Routing</h1>
     <hr>
     <!--Routing Links-->
-    <a [routerLink]="['']">Home</a>
-    <a [routerLink]="['/user']">User</a><!--Adding a slash makes it an absolute path not relative.-->
+    <a [routerLink]="['']">Home</a> |
+    <input type="text" #id (input)="0"> <!--(input)="0" is a hack to trigger dynamic updating-->
+    <a [routerLink]="['/user', id.value]">User</a><!--Adding a slash makes it an absolute path not relative.-->
 
     <hr>
     <router-outlet></router-outlet>
