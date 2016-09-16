@@ -3,7 +3,7 @@
     <hr>
     <!--Routing Links-->
     <a [routerLink]="['']">Home</a>
-    <a [routerLink]="['user']">User</a>
+    <a [routerLink]="['/user']">User</a><!--Adding a slash makes it an absolute path not relative.-->
 
     <hr>
     <router-outlet></router-outlet>
