@@ -20,6 +20,6 @@ export class HomeComponent implements OnDestroy {
   }
 
   ngOnDestroy(){
-
+    this.paramsSubscription.unsubscribe();
   }
 }
