@@ -24,12 +24,14 @@ export class UserComponent implements OnDestroy{
         //Creating a subscribe listen will cause a memory link if only
         //done in the constructor
         this.paramsSubscription = activatedRoute.params.subscribe(
-            (params: any) => {this.id = params['id']}
+            (params: any) => {
+                this.id = params['id']
+            }
         );
     }
 
     public goHome(){
-      this.router.navigate(['/']);
+      this.router.navigate(['/'], { queryParams: { 'analytics': 100 } });
     }
 
     public ngOnDestroy(){
