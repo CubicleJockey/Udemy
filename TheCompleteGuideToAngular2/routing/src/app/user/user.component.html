@@ -2,10 +2,14 @@
   USER COMPONENT!
 </h1>
 <!--Without the slash it will add an additional user localhost:4200/user/user-->
-<a [routerLink]="['user']">User (RelativePath)</a>
+<!--<a [routerLink]="['user']">User (RelativePath)</a>-->
 <!--With the slash it will NOT add an additional user localhost:4200/user/-->
-<a [routerLink]="['/user']">User (AbsolutePath)</a>
-<br>
+<!--<a [routerLink]="['/user']">User (AbsolutePath)</a>
+<br>-->
 <a [routerLink]="['../']">Home</a>
 <br>
 <button (click)="goHome()">Go Home!</button>
+<hr>
+<p>
+  Current User Id: [{{id}}]
+</p>
