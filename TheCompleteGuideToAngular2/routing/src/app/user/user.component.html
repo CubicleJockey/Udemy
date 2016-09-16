@@ -6,8 +6,7 @@
 <!--With the slash it will NOT add an additional user localhost:4200/user/-->
 <!--<a [routerLink]="['/user']">User (AbsolutePath)</a>
 <br>-->
-<a [routerLink]="['../']">Home</a>
-<br>
+<a [routerLink]="['/../']" [queryParams]="{analytics: 42}">Home</a> |
 <button (click)="goHome()">Go Home!</button>
 <hr>
 <p>
