@@ -1,14 +1,20 @@
 <article id="AppComponent">
-    <h1>Routing</h1>
-    <hr>
-    <!--Routing Links-->
-    <div  routerLinkActive="activeBorder" [routerLinkActiveOptions]="{ exact: true }">
-        <a [routerLink]="['']" [queryParams]="{analytics: 500}">Home</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-10">
+                <h1>Routing</h1>
+                <hr>
+                <!--Routing Links-->
+                <div  routerLinkActive="activeBorder" [routerLinkActiveOptions]="{ exact: true }">
+                    <a [routerLink]="['']" [queryParams]="{analytics: 500}">Home</a>
+                </div>
+                <input type="text" #id (input)="0"> <!--(input)="0" is a hack to trigger dynamic updating-->
+                <a [routerLink]="['user', id?.value]" routerLinkActive="active">User</a><!--Adding a slash makes it an absolute path not relative.-->
+                <hr>
+                <a [routerLink]="['notreal']" routerLinkActive="active">Not A Valid Route</a>
+                <hr>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
     </div>
-    <input type="text" #id (input)="0"> <!--(input)="0" is a hack to trigger dynamic updating-->
-    <a [routerLink]="['user', id?.value]" routerLinkActive="active">User</a><!--Adding a slash makes it an absolute path not relative.-->
-    <hr>
-    <a [routerLink]="['notreal']" routerLinkActive="active">Not A Valid Route</a>
-    <hr>
-    <router-outlet></router-outlet>
 </article>
