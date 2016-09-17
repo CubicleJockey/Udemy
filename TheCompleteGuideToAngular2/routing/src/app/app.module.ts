@@ -10,9 +10,11 @@ import { UserComponent } from './user/user.component';
 import { HomeComponent } from './home.component';
 import { UserDetailsComponent } from './user/user-details.component';
 import { UserEditComponent } from './user/user-edit.component';
+import { InvalidUrlComponent } from './invalid-url/invalid-url.component';
 
 //Providers
 import { RoutingModule } from './app.routes';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { RoutingModule } from './app.routes';
     UserComponent,
     HomeComponent,
     UserDetailsComponent,
-    UserEditComponent
+    UserEditComponent,
+    InvalidUrlComponent
   ],
   imports: [
     BrowserModule,
