@@ -1,15 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'dre-invalid-url',
   templateUrl: './invalid-url.component.html',
   styleUrls: ['./invalid-url.component.css']
 })
-export class InvalidUrlComponent implements OnInit {
-
+export class InvalidUrlComponent {
   constructor() { }
-
-  ngOnInit() {
-  }
-
 }

@@ -11,7 +11,7 @@ export class UserComponent implements OnDestroy{
     private id: string;
     private paramsSubscription: Subscription;
 
-    constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+    constructor(private router: Router, private activatedRoute: ActivatedRoute){
         /*
             SnapShot
             ---------

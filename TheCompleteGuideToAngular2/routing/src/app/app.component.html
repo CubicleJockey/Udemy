@@ -2,11 +2,13 @@
     <h1>Routing</h1>
     <hr>
     <!--Routing Links-->
-    <a [routerLink]="['']" [queryParams]="{analytics: 500}">Home</a> |
+    <div  routerLinkActive="activeBorder" [routerLinkActiveOptions]="{ exact: true }">
+        <a [routerLink]="['']" [queryParams]="{analytics: 500}">Home</a>
+    </div>
     <input type="text" #id (input)="0"> <!--(input)="0" is a hack to trigger dynamic updating-->
-    <a [routerLink]="['/user', id?.value]">User</a><!--Adding a slash makes it an absolute path not relative.-->
+    <a [routerLink]="['user', id?.value]" routerLinkActive="active">User</a><!--Adding a slash makes it an absolute path not relative.-->
     <hr>
-    <a [routerLink]="['notreal']">Not A Valid Route</a>
+    <a [routerLink]="['notreal']" routerLinkActive="active">Not A Valid Route</a>
     <hr>
     <router-outlet></router-outlet>
 </article>
