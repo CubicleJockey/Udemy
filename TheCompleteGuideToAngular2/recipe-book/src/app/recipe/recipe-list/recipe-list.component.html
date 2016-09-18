@@ -1,0 +1,17 @@
+<article>
+    <div class="row">
+        <div class="col-xs-12">
+            <a class="btn btn-success">New Recipe</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <ul class="list-group">
+                <dre-recipe-item *ngFor="let recipe of recipes"
+                                [recipe]="recipe"
+                                (click)="onSelected(recipe)">
+                </dre-recipe-item>
+            </ul>
+        </div>
+    </div>
+</article>

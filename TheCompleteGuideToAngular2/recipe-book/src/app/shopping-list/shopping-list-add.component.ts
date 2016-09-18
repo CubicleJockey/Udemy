@@ -1,17 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
-  moduleId: module.id,
-  selector: 'rb-shopping-list-add',
-  templateUrl: 'shopping-list-add.component.html'
+    selector: 'dre-shopping-list-add',
+    templateUrl: './shopping-list-add.component.html',
+    styleUrls: ['./shopping-list-add.component.css']
 })
-export class ShoppingListAddComponent implements OnInit {
+export class ShoppingListAddComponent {
+    public items: Array<any>;
 
-  public items: Array<any> = [];
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+    constructor() {
+        this.items = [];
+    }
 }

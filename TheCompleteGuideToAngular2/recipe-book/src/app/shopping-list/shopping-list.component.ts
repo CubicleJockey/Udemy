@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ShoppingListAddComponent } from './shopping-list-add.component';
 import { ShoppingListService } from './shopping-list.service';
-import { Ingredient } from '../shared/ingredient';
+import { Ingredient } from '../models/ingredients';
 
 @Component({
-  moduleId: module.id,
-  selector: 'rb-shopping-list',
-  templateUrl: 'shopping-list.component.html',
-  directives: [ShoppingListAddComponent]
+  selector: 'dre-shopping-list',
+  templateUrl: './shopping-list.component.html',
+  styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingListComponent implements OnInit {
   private ingredients: Array<Ingredient>;
@@ -19,5 +17,4 @@ export class ShoppingListComponent implements OnInit {
   ngOnInit() {
     this.ingredients = this.shoppingListService.getIngredients();
   }
-
 }

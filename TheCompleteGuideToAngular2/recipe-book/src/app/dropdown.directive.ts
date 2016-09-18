@@ -1,4 +1,5 @@
-import { Directive, HostBinding, HostListener}  from '@angular/core';
+import { Directive } from '@angular/core';
+import { HostListener, HostBinding } from '@angular/core/src/metadata/directives';
 
 @Directive({
   selector: '[dreDropdown]'
