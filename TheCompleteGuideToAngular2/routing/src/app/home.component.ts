@@ -1,4 +1,4 @@
-import {Component, OnInit, OnDestroy} from '@angular/core';
+import {Component, OnDestroy} from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 
@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnDestroy {
+export class HomeComponent implements OnDestroy{
   private paramsSubscription: Subscription;
   private queryParam: string;
 
@@ -19,7 +19,7 @@ export class HomeComponent implements OnDestroy {
     );
   }
 
-  ngOnDestroy(){
+  public ngOnDestroy(){
     this.paramsSubscription.unsubscribe();
   }
 }

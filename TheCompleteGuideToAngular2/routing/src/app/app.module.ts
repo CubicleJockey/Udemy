@@ -15,6 +15,7 @@ import { InvalidUrlComponent } from './invalid-url/invalid-url.component';
 //Providers
 import { RoutingModule } from './app.routes';
 import { UserDetailGuard } from './user/user-detail-guard';
+import { UserEditGuard } from './user/user-edit-guard';
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import { UserDetailGuard } from './user/user-detail-guard';
     HttpModule,
     RoutingModule
   ],
-  providers: [UserDetailGuard],
+  providers: [UserDetailGuard, UserEditGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
