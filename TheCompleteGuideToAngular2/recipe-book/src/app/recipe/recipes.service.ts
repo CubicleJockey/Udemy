@@ -3,7 +3,7 @@ import { Recipe } from '../models/recipe';
 import { Ingredient } from '../models/ingredients';
 
 @Injectable()
-export class RecipeService {
+export class RecipesService {
   private recipes: Array<Recipe>;
 
   constructor() {

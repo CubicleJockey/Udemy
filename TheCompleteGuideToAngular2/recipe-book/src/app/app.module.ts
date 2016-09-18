@@ -4,35 +4,38 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { RecipeComponent } from './recipe/recipe.component';
+import { RecipesComponent } from './recipe/recipes.component';
 import { RecipeDetailsComponent } from './recipe/recipe-details/recipe-details.component';
 import { RecipeListComponent } from './recipe/recipe-list/recipe-list.component';
 import { HeaderComponent } from './header/header.component';
 import { DropdownDirective } from './dropdown.directive';
 import { RecipeItemComponent } from './recipe/recipe-list/recipe-item.component';
-import { RecipeService } from './recipe/recipe.service';
+import { RecipesService } from './recipe/recipes.service';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingListAddComponent } from './shopping-list/shopping-list-add.component';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { RoutingModule } from './app.routes';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    RecipeComponent,
-    RecipeDetailsComponent,
-    RecipeListComponent,
-    HeaderComponent,
-    DropdownDirective,
-    RecipeItemComponent,
-    ShoppingListComponent,
-    ShoppingListAddComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule
-  ],
-  providers: [RecipeService, ShoppingListService],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        RecipesComponent,
+        RecipeDetailsComponent,
+        RecipeListComponent,
+        HeaderComponent,
+        DropdownDirective,
+        RecipeItemComponent,
+        ShoppingListComponent,
+        ShoppingListAddComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        RoutingModule
+    ],
+    providers: [RecipesService, ShoppingListService],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
